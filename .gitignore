@@ -52,3 +52,15 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Angular specific
+/node_modules/
+/dist/
+/tmp/
+/out-tsc/
+/.angular/cache/
+/.angular/
+*.log
+
+# IDE specific (optional if you also want to ignore VS Code settings)
+/.vscode/
