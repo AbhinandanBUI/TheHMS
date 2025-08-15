@@ -5,10 +5,10 @@ namespace TheHMS.ApiService.Controller.Auth
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController : ControllerBase
+    public class AuthControllerTests : ControllerBase
     {
         private readonly IAuth _authService;
-        public AuthController(IAuth auth)
+        public AuthControllerTests(IAuth auth)
         {
             _authService = auth;
         }
