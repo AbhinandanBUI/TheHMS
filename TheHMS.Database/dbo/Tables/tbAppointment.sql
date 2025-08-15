@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[tbAppointment] (
+    [AppointmentId]      BIGINT        IDENTITY (1, 1) NOT NULL,
+    [DoctorId]           BIGINT        NULL,
+    [UserId]             BIGINT        NULL,
+    [PatientName]        VARCHAR (50)  NULL,
+    [Age]                NUMERIC (18)  NULL,
+    [Gender]             BIT           NULL,
+    [MajorSymptoms]      VARCHAR (100) NULL,
+    [PreviousTreatment]  VARCHAR (100) NULL,
+    [ProblemDescription] VARCHAR (200) NULL,
+    [AppointmentDate]    DATETIME2 (7) NULL,
+    [AppointmentTime]    TIME (7)      NULL,
+    [AppointmentStatus]  BIT           DEFAULT ((0)) NULL,
+    [AppointmentType]    BIT           DEFAULT ((0)) NULL,
+    [NextAppointment]    VARCHAR (50)  NULL,
+    [Rver]               BIT           DEFAULT ((0)) NOT NULL,
+    [CreatedByUserId]    BIGINT        NOT NULL,
+    [CreatedOn]          DATETIME2 (7) DEFAULT (getdate()) NOT NULL,
+    [ModifiedByUserId]   BIGINT        NOT NULL,
+    [ModifiedOn]         DATETIME2 (7) NOT NULL,
+    PRIMARY KEY CLUSTERED ([AppointmentId] ASC),
+    CONSTRAINT [FK_tbAppointment_tb_mst_User] FOREIGN KEY ([CreatedByUserId]) REFERENCES [dbo].[tb_mst_User] ([UserID]),
+    CONSTRAINT [FK_tbAppointment_tb_mst_User1] FOREIGN KEY ([UserId]) REFERENCES [dbo].[tb_mst_User] ([UserID]),
+    CONSTRAINT [FK_tbAppointment_tb_mst_User2] FOREIGN KEY ([DoctorId]) REFERENCES [dbo].[tb_mst_User] ([UserID])
+);
+
