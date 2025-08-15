@@ -64,3 +64,11 @@ nunit-*.xml
 
 # IDE specific (optional if you also want to ignore VS Code settings)
 /.vscode/
+/.vs/
+
+# Ignore only inside DatabaseProject folder
+/TheHMS.Database/*.mdf
+/TheHMS.Database/*.ldf
+/TheHMS.Database/*.bak
+/TheHMS.Database/*.dbmdl
+/TheHMS.Database/*.jfm
