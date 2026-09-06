@@ -10,7 +10,6 @@
     <Folder Include="Service\Auth\" />
     <Folder Include="Service\Doctor\" />
     <Folder Include="Service\Patient\" />
-    <Folder Include="Service\UserManagement\" />
   </ItemGroup>
 
   <ItemGroup>

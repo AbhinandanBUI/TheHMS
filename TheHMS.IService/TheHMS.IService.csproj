@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="IService\Patient\" />
-    <Folder Include="IService\UserManagement\" />
     <Folder Include="IService\Doctor\" />
     <Folder Include="IService\Auth\" />
   </ItemGroup>

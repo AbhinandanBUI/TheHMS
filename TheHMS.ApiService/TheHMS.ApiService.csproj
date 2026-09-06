@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TheHMS.IService\TheHMS.IService.csproj" />
-    <ProjectReference Include="..\TheHMS.ServiceDefaults\TheHMS.ServiceDefaults.csproj" />
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <ProjectReference Include="..\TheHMS.IService\TheHMS.IService.csproj" />
+    <ProjectReference Include="..\TheHMS.ServiceDefaults\TheHMS.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\TheHMS.Service\TheHMS.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

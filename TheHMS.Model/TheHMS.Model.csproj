@@ -10,7 +10,6 @@
     <Folder Include="Model\Auth\" />
     <Folder Include="Model\Doctor\" />
     <Folder Include="Model\Patient\" />
-    <Folder Include="Model\UserManagement\" />
   </ItemGroup>
 
 </Project>
